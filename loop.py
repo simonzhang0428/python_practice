@@ -12,3 +12,14 @@ a = [1, 2, 3]
 b = ['Simon', 'Helen', 'Dudu']
 for i in zip(a, b):
     print(i)
+
+from math import sqrt
+for n in range(82,100):
+    root = sqrt(n)
+    if root == int(root):
+        print(n)
+        break
+
+else:
+    print("Don't find!")
+
