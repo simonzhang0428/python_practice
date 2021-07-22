@@ -26,3 +26,6 @@ print("{one} + {two} = {three}".format(two=2, one=1, three=3))
 # # %%
 # msg2 = "Hello Simon"
 # print(msg2)
+
+list_ = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+list_[3:9]
