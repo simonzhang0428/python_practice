@@ -12,7 +12,17 @@ print(s2.join(seq))
 msg = "Simon Zhang"
 print(msg)
 
-# %%
-msg2 = "Hello Simon"
-print(msg2)
-# %%
+x = "abc"
+y = "def"
+z = ["d", "e", "f"]
+print(x.join(y)) # treat "def" as ["d", "e", "f"]
+print(x.join(z))
+
+# string.format
+print("{} + {} = {}".format(3, 1, 2))
+print("{one} + {two} = {three}".format(two=2, one=1, three=3))
+
+
+# # %%
+# msg2 = "Hello Simon"
+# print(msg2)
