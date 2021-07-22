@@ -1,1 +1,1 @@
-# django-twitter
+# Python self-collection
