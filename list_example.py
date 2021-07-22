@@ -39,3 +39,15 @@ for key in name: # same as keys()
 name.setdefault("Dudu", 30)
 name.setdefault("Simon", 200) # only set when key is not in dict
 name["Simon"] = 666
+
+[i ** 2 for i in range(10)]
+[i ** 2 for i in range(10) if i % 2 == 0]
+[
+    i ** 3 
+    for i in range(10)
+    if i % 2 == 0
+]
+
+names = ["simon", "helen"]
+ages = [35, 36]
+{name : age for name, age in zip(names, ages)}
