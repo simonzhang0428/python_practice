@@ -62,5 +62,12 @@ for key, value in name.items():
 
 ## Tuple
 ```python
-
+t1 = 1,
+t2 = (1, 2, 3, 100, 5, 6)
+t3 = tuple('hello') # ('h', 'e', 'l', 'l', 'o')
+for t in t3:
+    print(t)
+max(t2)
+sorted(t2)
+len(t3)
 ```

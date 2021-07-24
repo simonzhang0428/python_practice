@@ -38,3 +38,13 @@ for choice in input_list:
     else:
         asset -= good_price
         print("Purchase successful!")
+
+# tuple
+t1 = 1,
+t2 = (1, 2, 3, 100, 5, 6)
+t3 = tuple('hello') # ('h', 'e', 'l', 'l', 'o')
+for t in t3:
+    print(t)
+max(t2)
+sorted(t2)
+len(t3)

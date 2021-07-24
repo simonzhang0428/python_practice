@@ -23,3 +23,8 @@ for n in range(82,100):
 else:
     print("Don't find!")
 
+key = 'abc'
+value = '123'
+for pair in zip(key, value):
+    print(pair)
+

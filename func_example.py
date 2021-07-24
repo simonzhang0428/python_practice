@@ -1,3 +1,17 @@
+def print_lines(*args): # * = tuple
+    for element in args:
+        print(element)
+print_lines('hi', 'simon')
+
+def my_divide(x, y):
+    integer = x // y
+    remainder = x % y
+    return integer, remainder
+
+t = (23, 5)
+my_divide(*t) # unpack
+
+###########################
 def func(a, b, c):
     """
     print a, b, c, in order
