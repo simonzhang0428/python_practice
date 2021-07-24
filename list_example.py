@@ -25,22 +25,26 @@ tuple_ = (1, 2, 3 )
 (1,).__class__ # only one element need ,
 
 # dict
-name = {"Simon" : 178,
-        "Helen" : 165}
-name["Simon"]
-name["Helen"] = 999
+name = {'Simom' : 178,
+        'Helen' : 165}
+name['Simom']
+name['Helen'] = 999
+name['xxx'] # KeyError
+name.get('xxx') # return None
+name.get('Dudu', 30) # default value is 30
+for key in name: # same as keys()
+    print(key)
+name['GuaiGuai'] = 25 # add / modify dict use dict[key] = value
+del name['GuaiGuai']
+name.pop('Helen') # return value, remove entry
+name.setdefault('Dudu', 30) # only set when key is not in dict
+name.keys()
+name.values()
+name.items()
 
 # f-string, concatenate string and other type
 for key, value in name.items():
     print(f'{key} height: {value}')
-
-name.get("Dudu", 30) # default value is 30
-for key in name: # same as keys()
-    print(key)
-
-name.setdefault("Dudu", 30)
-name.setdefault("Simon", 200) # only set when key is not in dict
-name["Simon"] = 666
 
 [i ** 2 for i in range(10)]
 [i ** 2 for i in range(10) if i % 2 == 0]

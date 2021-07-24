@@ -23,7 +23,24 @@ print(x.join(z))
 # string.format
 print("{} + {} = {}".format(3, 1, 2))
 print("{one} + {two} = {three}".format(two=2, one=1, three=3))
+print(f'message = {msg}')
 
+# string method
+s = 'hello simon'
+s.title() # 'Hello Simon'
+len(s)
+s[5:10]
+s[-3:-1]
+s.upper()
+s.lower()
+s.index('h')
+s[0] == 'h'
+s = '    Haha,   SSSimonnnnn   '
+s.strip()
+s.strip().split(',')
+s.count('S')
+s.find('XX') # -1 if not find
+s.index('S') # throw error if not find
 
 # # %%
 # msg2 = "Hello Simon"
@@ -54,4 +71,5 @@ b
 # deep copy
 c = [[0] for _ in range(4)]
 c
+
 
