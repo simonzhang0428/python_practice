@@ -9,8 +9,11 @@ l2 = [4, 5]
 l1.extend(l2)
 l1.append(100)
 l1.insert(0, 666)
-l1.pop() # default pop last element
-l1.remove(2)
+
+l1.pop() # default pop last element, return it
+l1.remove(2) # remove first accurance (value)
+del l1[1] # remove at specific index
+
 l1.reverse() # change in place, no return
 l1.sort(min) # decresing order
 l1.index(4) # first accurance
