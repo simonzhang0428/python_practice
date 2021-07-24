@@ -58,3 +58,15 @@ for key, value in name.items():
 names = ["simon", "helen"]
 ages = [35, 36]
 {name : age for name, age in zip(names, ages)}
+
+# set
+s = {c for c in 'abracaabroa' if c not in 'abc'} # {'r', 'o'}
+s2 = set('foobar') # {'r', 'f', 'b', 'a', 'o'}
+s3 = set(['a', 'b', 'foo'])
+s.isdisjoint(s2)
+s.issubset(s2)
+s < s2
+s.union(s2)
+s.intersection(s2)
+s2.difference(s) # s2 - s
+s.symmetric_difference(s2) # either in s or s2, but not both
