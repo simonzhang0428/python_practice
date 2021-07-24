@@ -28,3 +28,9 @@ value = '123'
 for pair in zip(key, value):
     print(pair)
 
+list(enumerate('simon')) # [(0, 's'), (1, 'i'), (2, 'm'), (3, 'o'), (4, 'n')]
+list(zip(range(5), 'simon'))
+d = dict(enumerate('abc')) # {0: 'a', 1: 'b', 2: 'c'}
+z = zip('xyz', [23, 24, 25])
+dict(z)
+d1 = {(0, 0) : 5}
