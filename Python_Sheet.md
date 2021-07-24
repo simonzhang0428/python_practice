@@ -7,14 +7,16 @@
 l1 = [1, 2, 3]
 l2 = [4, 5]
 l1.extend(l2)
+l1.append(100)
+l1.insert(0, 666)
 l1.pop() # default pop last element
 l1.remove(2)
 l1.reverse() # change in place, no return
 l1.sort(min) # decresing order
 l1.index(4) # first accurance
 l1.count(0)
-l1.sort(key=None, reverse=False) 
-sorted(l1) # list not change
+l1.sort(key=None, reverse=False) # change l1
+sorted(l1) # l1 not change
 ```
 
 ## String
@@ -45,12 +47,16 @@ name['Helen'] = 999
 name['xxx'] # KeyError
 name.get('xxx') # return None
 name.get('Dudu', 30) # default value is 30
+name.setdefault('Dudu', 30) # only set when key is not in dict
+
 for key in name: # same as keys()
     print(key)
+
 name['GuaiGuai'] = 25 # add / modify dict use dict[key] = value
 del name['GuaiGuai']
-name.pop('Helen') # return value, remove entry
-name.setdefault('Dudu', 30) # only set when key is not in dict
+name.pop('Helen', default=-1) # return value, remove entry
+name.popitem() # return 2-tuple, LIFO order
+
 name.keys()
 name.values()
 name.items()

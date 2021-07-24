@@ -41,6 +41,7 @@ name.setdefault('Dudu', 30) # only set when key is not in dict
 name.keys()
 name.values()
 name.items()
+name.popitem()
 
 # f-string, concatenate string and other type
 for key, value in name.items():
