@@ -11,10 +11,12 @@ lst2 = [4, 5]
 lst1.extend(lst2)
 lst1.pop() # default pop last element
 lst1.remove(2)
-lst1.reverse()
+lst1.reverse() # change in place, no return
 lst1.sort(min) # decresing order
 lst1.index(4) # first accurance
 lst1.count(0)
+lst1.sort(key=None, reverse=False) 
+sorted(lst1)
 
 tuple_ = (1, 2, 3 )
 # TypeError: 'tuple' object does not support item assignment
