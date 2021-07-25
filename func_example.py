@@ -52,13 +52,20 @@ class Student:
         print("YES")
         self.__private()
 
-    def __repr__(self) -> str:
+    def __repr__(self) -> str: # unambiguous / developer
         return f'student name: {self.name}'
+
+    def __str__(self) -> str: # readable / customer
+        return '“informal” or nicely printable string representation of object.'
+
+    def __eq__(self, o: object) -> bool:
+        # TODO, for compare
+        return True
 
 stu = Student()
 stu.set_name("Simon")
 print(stu.__dict__) # dict of attributes
-print(stu) # __repr__
+print(stu) # __str__ if no, then __repr__
 print(stu.__doc__) # return """doc"""
 
 stu.speak()
@@ -93,6 +100,13 @@ class MyClass:
     @score.setter
     def score(self, args):
         self.value = args
+
+class MyChildClass(MyClass):
+    @classmethod
+    def say(cls):
+        print('child class')
+
+MyChildClass.say()
 
 a = MyClass()
 print(a.score)

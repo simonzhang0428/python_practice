@@ -2,7 +2,7 @@
 
 ## Creator: [Simon Zhang](https://simonzhang0428.github.io)
 
-## List
+## List -> list() / [1, 2]
 ```python
 l1 = [1, 2, 3]
 l2 = [4, 5]
@@ -22,7 +22,7 @@ l1.sort(key=None, reverse=False) # change l1
 sorted(l1) # l1 not change
 ```
 
-## String
+## String -> str
 ```python
 s = 'hello simon'
 s.title() # 'Hello Simon'
@@ -41,7 +41,7 @@ s.find('XX') # -1 if not find
 s.index('S') # throw error if not find
 ```
 
-## Dictionary
+## Dictionary -> dict() / {'one' : 1} / {'one'=1}
 ```python
 name = {'Simom' : 178,
         'Helen' : 165}
@@ -69,7 +69,7 @@ for key, value in name.items():
     print(f'{key} height: {value}')
 ```
 
-## Tuple
+## Tuple -> tuple() / (1, )
 ```python
 t1 = 1,
 t2 = (1, 2, 3, 100, 5, 6)
@@ -81,7 +81,7 @@ sorted(t2)
 len(t3)
 ```
 
-## set
+## Set -> set() 
 ```python
 s = {c for c in 'abracaabroa' if c not in 'abc'} # {'r', 'o'}
 s2 = set('foobar') # {'r', 'f', 'b', 'a', 'o'}
@@ -192,10 +192,14 @@ class Student:
 
     def __repr__(self) -> str:
         return f'student name: {self.name}'
+    
+    def __str__(self) -> str:
+        return '“informal” or nicely printable string representation of object.'
 
 stu = Student()
 stu.set_name("Simon")
 print(stu.__dict__) # dict of attributes
-print(stu) # __repr__
+print(stu) # __str__
+print(repr(stu)) # __repr__
 print(stu.__doc__) # return """doc"""
 ```
