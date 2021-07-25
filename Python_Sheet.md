@@ -165,3 +165,37 @@ eat(jelly_bean for jelly_bean in jelly_beans
     if jelly_bean.color == 'black')
 ```
 
+## class
+
+```python
+class Student:
+    """This is a student class."""
+
+    def __init__(self, name = "") -> None:
+        self.name = name
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_name(self):
+        return self.name
+
+    def speak(self):
+        print(f'Hello, World! I am {self.name}')
+
+    def __private(self): # private
+        print("NO")
+    
+    def public(self):
+        print("YES")
+        self.__private()
+
+    def __repr__(self) -> str:
+        return f'student name: {self.name}'
+
+stu = Student()
+stu.set_name("Simon")
+print(stu.__dict__) # dict of attributes
+print(stu) # __repr__
+print(stu.__doc__) # return """doc"""
+```

@@ -31,6 +31,7 @@ print(func2(1))
 print(func3(1))
 
 class Student:
+    """This is a student class."""
 
     def __init__(self, name = "") -> None:
         self.name = name
@@ -51,8 +52,15 @@ class Student:
         print("YES")
         self.__private()
 
+    def __repr__(self) -> str:
+        return f'student name: {self.name}'
+
 stu = Student()
 stu.set_name("Simon")
+print(stu.__dict__) # dict of attributes
+print(stu) # __repr__
+print(stu.__doc__) # return """doc"""
+
 stu.speak()
 # stu.__private()
 stu.public()
