@@ -245,6 +245,35 @@ print(repr(stu)) # __repr__
 print(stu.__doc__) # return """doc"""
 ```
 
+## property
+
+```python
+class C(object):
+    def __init__(self):
+        self._x = None
+ 
+    @property
+    def x(self):
+        """I'm the 'x' property."""
+        return self._x
+ 
+    @x.setter
+    def x(self, value):
+        self._x = value
+ 
+    @x.deleter
+    def x(self):
+        del self._x
+
+c = C()
+c.x = 10 # setx
+print(c.x) # getx
+del c.x # delx
+
+# class property([fget[, fset[, fdel[, doc]]]])
+# x = property(getx, setx, delx, "I'm the 'x' property.")
+```
+
 ## decorator
 
 ```python
