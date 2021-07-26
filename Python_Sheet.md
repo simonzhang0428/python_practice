@@ -39,6 +39,21 @@ s.strip().split(',')
 s.count('S')
 s.find('XX') # -1 if not find
 s.index('S') # throw error if not find
+
+# f-strings, Formatted string literal
+import math
+print(f'The value of pi is approximately "{math.pi:.3f}"')
+
+table = {'Simon': 178, 'helen': 165, 'dudu': 30}
+for name, age in table.items():
+    print(f'{name:10} ==> {age:10}')
+
+print('{1} and {0}'.format('one', 'two')) # position
+print('This {food} is {adjective}.'.format(food='KFC', adjective='Bad')) # keyword
+
+table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
+print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '
+      'Dcab: {0[Dcab]:d}'.format(table))
 ```
 
 ## Dictionary -> dict() / {'one' : 1} / {'one'=1}
