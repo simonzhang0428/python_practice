@@ -69,6 +69,40 @@ for key, value in name.items():
     print(f'{key} height: {value}')
 ```
 
+## defalutdict
+
+```python
+# list for append
+s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
+d = defaultdict(list)
+for k, v in s:
+    d[k].append(v)
+
+sorted(d.items())
+# [('blue', [2, 4]), ('red', [1]), ('yellow', [1, 3])]
+
+
+# int for count
+s = 'mississippi'
+d = defaultdict(int)
+for k in s:
+    d[k] += 1
+
+sorted(d.items())
+# [('i', 4), ('m', 1), ('p', 2), ('s', 4)]
+
+
+# set for de-duplicate
+s = [('red', 1), ('blue', 2), ('red', 3), ('blue', 4), ('red', 1), ('blue', 4)]
+d = defaultdict(set)
+for k, v in s:
+    d[k].add(v)
+
+sorted(d.items())
+# [('blue', {2, 4}), ('red', {1, 3})]
+```
+
+
 ## Tuple -> tuple() / (1, )
 ```python
 t1 = 1,
