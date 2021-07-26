@@ -2,6 +2,7 @@ class C(object):
     """Silly example!!!"""
 
     def __init__(self):
+        """XXXX"""
         self._x = None
  
     def getx(self):
@@ -17,6 +18,9 @@ class C(object):
 
 # class property([fget[, fset[, fdel[, doc]]]])
 
+c = C()
+c.x = 10 # setx
+print(C.x.__doc__)
 
 class C(object):
     def __init__(self):
@@ -36,9 +40,9 @@ class C(object):
         del self._x
 
 c = C()
-c.x = 10 # setx
+# c.x = 10 # setx
 print(c.x) # getx
-del c.x # delx
+# del c.x # delx
 
 c.x = 'HELEN'
-print(c.x) # getx
+print(C.x.__doc__) # no need instance
