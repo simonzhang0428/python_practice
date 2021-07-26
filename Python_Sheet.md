@@ -215,7 +215,7 @@ def timer(fun):
 
 import time
 
-
+# no param
 def timer(func):
     def inner():
         start = time.time()
@@ -223,4 +223,15 @@ def timer(func):
         end = time.time()
         print('function {} cost {} seconds'.format(func.__name__, round(end - start, 2)))
     return inner
+
+# with params
+def repeat_func(n):
+    def wrapper(func):
+        def inner():
+            print('before function run')
+            for i in range(n):
+                func()
+            print('after function run')
+        return inner
+    return wrapper
 ```
