@@ -112,12 +112,19 @@ d1 = {(0, 0) : 5}
 
 ## stack
 ```python
-
+stack = list(range(6))
+stack.append(10)
+stack.append(20)
+stack.pop()
 ```
 
 ## queue
 ```python
-
+from collections import deque
+queue = deque(['simon', 'helen', 'dudu'])
+queue.append('neinei')
+queue.popleft()
+queue.popleft()
 ```
 
 ## ASCII
