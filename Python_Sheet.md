@@ -203,3 +203,24 @@ print(stu) # __str__
 print(repr(stu)) # __repr__
 print(stu.__doc__) # return """doc"""
 ```
+
+## decorator
+
+```python
+def timer(fun):
+    def inner():
+        <inner_body>
+        fun()
+    return inner
+
+import time
+
+
+def timer(func):
+    def inner():
+        start = time.time()
+        func()
+        end = time.time()
+        print('function {} cost {} seconds'.format(func.__name__, round(end - start, 2)))
+    return inner
+```
