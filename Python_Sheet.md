@@ -320,3 +320,22 @@ def repeat_func(n):
         return inner
     return wrapper
 ```
+
+## Counter
+
+```python
+from collections import Counter
+counter1 = Counter({'x': 4, 'y': 2, 'z': -2})
+counter2 = Counter({'x1': -12, 'y': 5, 'z':4 })
+
+_elements = counter1.elements() # will give you all elements with positive value and count>0
+for a in _elements: # tertools.chain object
+    print(a)
+
+counter1.most_common() # default sort and return all
+counter1.subtract(counter2) # c1 - c2
+counter1.update(counter2) # c1 + c2
+
+c1 +/-/&/| c2
+# return positve, & == common, | == max
+```
