@@ -84,7 +84,7 @@ for key, value in name.items():
     print(f'{key} height: {value}')
 ```
 
-## defalutdict
+## defaultdict
 
 ```python
 # list for append
@@ -135,13 +135,20 @@ len(t3)
 s = {c for c in 'abracaabroa' if c not in 'abc'} # {'r', 'o'}
 s2 = set('foobar') # {'r', 'f', 'b', 'a', 'o'}
 s3 = set(['a', 'b', 'foo'])
+
+s.add(x)
+s.remove(x) # raise error if absence
+s.discard(x) # return None if absence
+s.copy() # deep copy
+s.update(s2) s == s2
+
 s.isdisjoint(s2)
 s.issubset(s2)
 s < s2
-s.union(s2)
-s.intersection(s2)
-s2.difference(s) # s2 - s
-s.symmetric_difference(s2) # either in s or s2, but not both
+s.union(s2) == s | s2
+s.intersection(s2) == s & s2
+s2.difference(s) == s2 - s
+s.symmetric_difference(s2) == s ^ s2 # either in s or s2, but not both
 ```
 
 ## zip / enumerate
@@ -174,6 +181,8 @@ queue = deque(['simon', 'helen', 'dudu'])
 queue.append('neinei')
 queue.popleft()
 queue.popleft()
+queue[0] # peek
+queue.clear()
 ```
 
 ## ASCII
@@ -332,10 +341,10 @@ _elements = counter1.elements() # will give you all elements with positive value
 for a in _elements: # tertools.chain object
     print(a)
 
-counter1.most_common() # default sort and return all
+counter1.most_common(3) # default sort and return all
 counter1.subtract(counter2) # c1 - c2
 counter1.update(counter2) # c1 + c2
 
 c1 +/-/&/| c2
-# return positve, & == common, | == max
+# return positve, & == min, | == max
 ```
